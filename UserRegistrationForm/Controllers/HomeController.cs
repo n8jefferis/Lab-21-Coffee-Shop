@@ -40,5 +40,11 @@ namespace UserRegistrationForm.Controllers
             ViewBag.userName = inputUser.userName;
             return View();
         }
+
+        public ActionResult Order(User inputUser)
+        {
+            ViewBag.Order = inputUser.order;
+            return View();
+        }
     }
 }

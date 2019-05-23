@@ -10,5 +10,6 @@ namespace UserRegistrationForm.Models
         public string userName { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+        public string order { get; set; }
     }
 }

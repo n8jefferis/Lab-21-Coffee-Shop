@@ -1,13 +1,25 @@
-﻿<h2>Please Create an Account:</h2>
+﻿<script src="~/Scripts/Validation.js"></script>
+<h2>Create an Coffee Cart Account</h2>
 <form action="Result" method="post">
     UserName:<br>
     <input type="text" name="userName" required />
     <br>
     Email:<br>
-    <input type="email" name="email" required/>
+    <input type="email" name="email" required />
     <br>
     Password:<br>
-    <input type="text" name="password" required minlength="8" maxlength="30"/>
-    <br><br>
-    <input type="submit" />
+    <input type="password" name="password" id="password" minlength="8" maxlength="30" />
+    <br>
+    Confirm Password: <br />
+    <input name="password_confirm" required="required" type="password" id="password_confirm" oninput="check(this)" />
+    <br /><br>
+    Gender:<br />
+    <input type="radio" name="gender" value="male" checked> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other
+    <br /><br />
+    Phone:<br />
+    <input type="tel" name="phone" value="" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" title="Please enter a valid phone number"/>
+    <input type="submit" onclick="check(input)"/>
+    <br /><br />
 </form>
